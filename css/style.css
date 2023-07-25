@@ -1,0 +1,931 @@
+body {
+   	font-size: 12px;
+    line-height: 1em;
+	margin: 0;
+	padding: 0;
+}
+body.mce-content-body {
+	background: #fff;	
+}
+img {
+	border: 0;
+    vertical-align: middle;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+textarea {
+    resize: vertical;
+}
+a {
+	cursor: pointer;
+	text-decoration: none;	
+}
+a:hover {
+	text-decoration: underline;	
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+p,
+pre {
+    margin: 0;
+	padding: 0;
+}
+header,
+section,
+footer,
+article {
+	display: block;	
+}
+/* Custom styles
+-------------------------------------------------------- */
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 16px;
+	color: #e4d5b6;
+	background: #000;
+	min-width: 1200px;
+}
+.wrapper {
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+}
+.hidden {
+	display: none;
+}
+
+.column {
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	float: left;
+}
+.column-1-2 {
+	width: 50%;
+}
+.column-1-3 {
+	width: 33.3%;
+	padding: 0 60px;
+}
+
+/*---
+	Typography
+---*/
+
+
+/*---
+	Navigation 
+---*/
+.page-header {
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	min-width: 1200px;
+	height: 60px;
+	line-height: 60px;
+	top: 0;
+	left: 0;
+	background: #000;
+	border-top: 3px solid #c59949;
+}
+.page-header--cigars {
+	border-bottom: 1px solid rgba(197, 153, 73, 0.5);
+}
+.page-logo {
+	position: absolute;
+	display: block;
+	width: 100px;
+	left: 50%;
+	margin-left: -50px;
+	margin-top: 10px;
+}
+.page-logo-image {
+	width: 100px;
+}
+.page-nav-list {
+	display: table;
+	width: 100%;
+}
+.page-nav-item {
+	display: table-cell;
+	width: 16.666%;
+}
+.page-nav-item--active .page-nav-link {
+	border-bottom: 1px solid;
+}
+.page-nav-item--active .page-nav-link:hover {
+	text-decoration: none;
+}
+.page-nav-item--right {
+	text-align: right;
+}
+.page-nav-link {
+    font-family: 'Lora', serif;
+	padding-bottom: 20px;
+	font-size: 14px;
+	color: #e4d5b6;
+}
+.page-nav-link:hover {
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+.page-subnav {
+    display: none;
+    background: #000;
+    border-top: 1px solid;
+    margin-top: -2px;
+    margin-left: -25px;
+}
+.page-nav-item:hover .page-subnav {
+    display: block;
+}
+.page-subnav-item,
+.page-subnav-link {
+    display: block;
+}
+.page-subnav-item {
+    line-height: 1.5em;
+    border-bottom: 1px solid rgba(228, 213, 182, 0.19);
+}
+.page-subnav-link {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: #e4d5b6;
+    padding: 10px 5px 10px 25px;
+}
+.page-subnav-link:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+/*---
+	Frontpage slider
+---*/
+.frontpage-slider-holder {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+.frontpage-slider,
+.frontpage-slide {
+	height: 100%;
+	width: 100%;
+}
+.frontpage-slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-size: 0;
+}
+.frontpage-slide:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.frontpage-slide-text {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	font-size: 14px;
+}
+.frontpage-title {
+	position: relative;
+	text-align: center;
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 42px;
+	font-weight: normal;
+	color: #c59949;
+	padding-bottom: 60px;
+	margin-bottom: 45px;
+}
+.frontpage-title:after {
+	content: '';
+	width: 60px;
+	height: 1px;
+	background: #c59949;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -30px;
+	opacity: 0.5;
+}
+.text-usual {
+	font-style: normal;
+	font-size: 24px;
+	color: #fdedca;
+}
+.frontpage-slide-p {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 20px;
+	line-height: 1.5em;
+}
+.frontpage-slide--selection {
+	background: url(../gfx/selection.jpg) center center no-repeat;
+	background-size: cover;
+}
+.frontpage-slide--heritage {
+	background: url(../gfx/heritage.jpg) center center no-repeat;
+	background-size: cover;
+}
+.slider-arrow {
+	position: absolute;
+	z-index: 9;
+	width: 65px;
+	height: 100%;
+	opacity: 0.25;
+	top: 0;
+	-webkit-transition: opacity 0.25s;
+	        transition: opacity 0.25s;
+}
+.slider-arrow:hover {
+	opacity: 0.4;
+	-webkit-transition: opacity 0.25s;
+	        transition: opacity 0.25s;
+}
+.slider-arrow--left {
+	left: 0;
+	background: #000 url(../gfx/arrow-left.png) center center no-repeat;
+	background-size: 50%;
+}
+.slider-arrow--right {
+	right: 0;
+	background: #000 url(../gfx/arrow-right.png) center center no-repeat;
+	background-size: 50%;
+}
+.browse-cigars {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	text-transform: uppercase;
+	background: #000;
+	text-align: center;
+}
+.browse-cigars-link {
+	color: #c59949;
+	font-size: 20px;
+	background: #000 url(../gfx/arrow-down.png) right center no-repeat;
+	background-size: 10%;
+	padding-right: 40px;
+}
+.browse-cigars-link--dist {
+	background-size: 5%;
+}
+
+/*---
+	Cigars slider
+---*/
+.cigars-slider-holder,
+.cigars-slider {
+	height: 650px;
+}
+.cigars-slider-holder--inner,
+.cigars-slider--inner {
+	height: 450px;
+}
+.cigars-slider--inner .cigar-hover {
+	opacity: 0 !important;
+}
+.cigars-slider--inner .cigar {
+	background-size: contain;
+}
+.cigars-slider-holder {
+	position: relative;
+}
+.cigar {
+	position: relative;
+}
+.cigar--robusto {
+	background: url(../gfx/robusto.jpg) center center no-repeat;
+}
+.cigar--granmareva {
+	background: url(../gfx/mareva.jpg) center center no-repeat;
+}
+.cigar--salomone {
+	background: url(../gfx/salomone.jpg) center center no-repeat;
+}
+.cigar--pyramide {
+	background: url(../gfx/pyramide.jpg) center center no-repeat;
+}
+.cigar--tail {
+	background: url(../gfx/tail.jpg) center center no-repeat;
+}
+.cigar--belicoso {
+	background: url(../gfx/belicoso.jpg) center center no-repeat;
+}
+.cigar--grandcafe {
+	background: url(../gfx/grandcafe.jpg) center center no-repeat;
+}
+.cigar--dahman {
+	background: url(../gfx/dahman.jpg) center center no-repeat;
+}
+.cigar--mareva {
+	background: url(../gfx/mareva.jpg) center center no-repeat;
+}
+.cigar:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	opacity: 0.6;
+	-webkit-transition: opacity 0.25s;
+}
+.cigar.slick-active:before {
+	opacity: 0.7;
+}
+/*
+.cigar.slick-center + .cigar.slick-active:before {
+	opacity: 0.6;
+}
+*/
+.cigar.slick-center + .cigar.slick-active:hover:before,
+.cigar:hover:before {
+	opacity: 0.3;
+	-webkit-transition: opacity 0.25s;
+	        transition: opacity 0.25s;
+}
+.cigar.slick-center:before {
+	opacity: 0;
+}
+.cigar-hover {
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(197, 153, 73, 0.5);
+	text-align: center;
+	padding: 0 30px;
+	padding-top: 400px;
+	opacity: 0;
+	-webkit-transition: opacity 0.25s;
+	        transition: opacity 0.25s;
+}
+.cigar-title {
+	position: relative;
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 30px;
+	color: #fff;
+	padding-bottom: 20px;
+	margin-bottom: 15px;
+}
+.cigar-title:after {
+	content: '';
+	width: 60px;
+	height: 1px;
+	background: #fdedca;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -30px;
+	opacity: 0.5;
+}
+.cigar-description {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 18px;
+	line-height: 1.5em;
+}
+.cigar.slick-center:hover .cigar-hover {
+	opacity: 1;
+	text-decoration: none;
+	-webkit-transition: opacity 0.25s;
+	        transition: opacity 0.25s;
+}
+
+
+/*---
+	News
+---*/
+.frontpage-news {
+	padding: 110px 0 80px 0;
+}
+.frontpage-news-title {
+	font-family: 'Lora', serif;
+	font-size: 24px;
+	text-decoration: none;
+	border-bottom: 1px solid;
+	line-height: 1.5em;
+	color: #c59949;
+}
+.frontpage-news-text {
+	margin-top: 25px;
+	line-height: 1.5em;
+}
+.frontpage-news-readmore {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 14px;
+	border-bottom: 1px solid;
+	color: #fdedca;
+	float: right;
+	margin-top: 20px;
+}
+.read-all-holder {
+	text-align: center;
+	margin-top: 50px;
+}
+.read-all-link {
+	text-transform: uppercase;
+	color: #c59949;
+	font-size: 16px;
+	border-bottom: 1px solid;
+}
+.read-all-link:hover,
+.frontpage-news-title:hover,
+.frontpage-news-readmore:hover {
+	text-decoration: none;
+	border-color: transparent;
+}
+
+/*---
+	Motto
+---*/
+.section--motto {
+	position: relative;
+/*	height: 400px;*/
+	background: url(../gfx/motto.jpg) center center no-repeat;
+	background-size: cover;
+	border-top: 5px solid rgba(253, 237, 202, 0.15);
+	border-bottom: 5px solid rgba(253, 237, 202, 0.15);
+}
+.section--motto:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.motto-holder {
+	margin: 80px 0;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	text-align: center;
+}
+.frontpage-title--motto {
+	line-height: 1.2em;
+}
+.motto-readmore {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 20px;
+	line-height: 1.5em;
+	color: #fdedca;
+}
+
+/*---
+	Footer
+---*/
+.back-to-top-holder {
+	height: 50px;
+	line-height: 50px;
+	background: #c59949;
+	text-align: center;
+}
+.back-to-top {
+	text-transform: uppercase;
+	color: #000;
+	font-size: 24px;
+	padding-right: 60px;
+	background: url(../gfx/back-to-top.png) right center no-repeat;
+	background-size: 25%;
+}
+.back-to-top:hover {
+	text-decoration: none;
+	opacity: 0.75;
+}
+.social-holder {
+/*	height: 100px;*/
+/*	line-height: 100px;*/
+}
+.social-part {
+	text-align: center;
+}
+.social-holder {
+	height: 30px;
+	line-height: 30px;
+/*	width: 55%;*/
+/*	text-align: right;*/
+	margin: 30px auto;
+}
+.social-holder--fb {
+	width: 40%;
+	text-align: right;
+	background: url(../gfx/fb.png) left center no-repeat;
+	background-size: contain;
+}
+.social-holder--ig {
+	width: 50%;
+	text-align: right;
+	background: url(../gfx/inst.png) left center no-repeat;
+	background-size: contain;
+}
+.instagram-link,
+.facebook-link {
+	text-transform: uppercase;
+	color: #fdedca;
+	font-size: 16px;
+}
+
+/*---
+	article list
+---*/
+.article-preview {
+	position: relative;
+	height: 400px;
+	border-bottom: 5px solid #000;
+	text-align: center;
+	font-size: 0;
+}
+.article-preview:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.article-preview:first-of-type {
+	padding-top: 55px;
+}
+.article-preview--colossus {
+	background: url(../gfx/article-1.jpg) center center no-repeat;
+	background-size: cover;
+}
+.article-preview--villa {
+	background: url(../gfx/article-2.jpg) center center no-repeat;
+	background-size: cover;
+}
+.article-preview--wind {
+	background: url(../gfx/article-3.jpg) center center no-repeat;
+	background-size: cover;
+}
+.article-preview .wrapper {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	text-align: left;
+}
+.article-preview:nth-child(even) .column-1-2 {
+	float: right;
+	text-align: right;
+}
+.article-preview-heading {
+	font-family: 'Lora', serif;
+	font-size: 26px;
+	line-height: 1.3em;
+	margin-bottom: 30px;
+	color: #c59949;
+}
+.article-preview-text {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	line-height: 1.8em;
+	margin-bottom: 30px;
+}
+.article-preview-readmore {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	color: #c59949;
+	border-bottom: 1px solid;
+}
+.article-preview-readmore:hover {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+/*---
+	inner text 
+---*/
+.page-content-holder {
+	padding-top: 45px;
+	height: auto;
+/*	min-height: 100%;*/
+/*	margin-bottom: -140px;*/
+	padding-bottom: 40px;
+}
+.page-heading-holder {
+	height: 250px;
+	line-height: 250px;
+	text-align: center;
+	background: url(../gfx/article-1.jpg) center center no-repeat;
+	background-size: cover;
+}
+.page-heading {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 38px;
+	color: #c59949;
+}
+.page-content {
+	padding-top: 50px;
+}
+.page-content p {
+	line-height: 2em;
+	margin-bottom: 1.5em;
+}
+.page-content-text > p:first-of-type {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 20px;
+	margin-bottom: 40px;
+	line-height: 1.5em;
+}
+.page-content quote {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	display: block;
+	text-align: center;
+	color: #fff;
+	margin: 35px 0 35px 0;
+	font-size: 24px;
+}
+.page-content-gallery {
+	margin: 40px 0 0px;
+}
+.page-content-gallery .column-1-3 {
+	padding: 0;
+}
+.page-content-gallery-link {
+	display: block;
+	width: 100%;
+	height: 220px;
+	background-size: cover;
+	background-position: center center;
+	margin-bottom: 20px;
+}
+
+
+/*---
+	news list 
+---*/
+.news-holder {
+	-moz-box-sizing: border-box;
+	     box-sizing: border-box;
+	padding: 0 30px;
+	padding-bottom: 40px;
+	
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+.news-image {
+	width: 100%;
+}
+.news-title {
+	margin: 20px 0;
+}
+.news-title a {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 24px;
+	text-decoration: none;
+	border-bottom: 1px solid;
+	line-height: 1.5em;
+	color: #c59949;
+}
+.news-title a:hover {
+	border: none;
+}
+.news-readmore {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 14px;
+	color: #fdedca;
+	border-bottom: 1px solid;
+	float: right;
+}
+.news-readmore:hover {
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+}
+
+
+/*---
+	Cigar page
+---*/
+.cigar-holder {
+	position: relative;
+}
+.cigar-header {
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 160px;
+}
+.cigar-header-title {
+	position: relative;
+	z-index: -1;
+	font-family: 'Lora', serif;
+	font-style: italic;
+	font-size: 180px;
+	font-weight: normal;
+	line-height: 0.85em;
+	text-align: center;
+	color: rgba(97, 94, 90, 0.2);
+	padding-top: 100px;
+	padding-bottom: 100px;
+	margin-top: -100px;
+	background: url(../gfx/cigars-png/top-light.png) center 25% no-repeat;
+	background-size: cover;
+}
+.cigar-header-image-holder {
+	margin-top: -130px;
+	height: 145px;
+/*	padding-bottom: 100px;*/
+/*	background: url(../gfx/cigars-png/bottom-light.png) center -115px no-repeat;*/
+/*	background-size: cover;*/
+}
+.cigar-header-image {
+	position: relative;
+	height: 100%;
+}
+.cigar-header-image:before {
+	content: '';
+	position: absolute;
+	display: block;
+	bottom: -5px;
+	height: 150px;
+	width: 110%;
+	background: url(../gfx/cigars-png/cigar-shadow.png) center bottom no-repeat;
+	background-size: contain;
+}
+.cigar-information-holder {
+	color: #fff;
+	margin: 30px 0 100px;
+}
+.cigar-overview {
+	margin-bottom: 60px;
+}
+.cigar-overview .column {
+	text-align: center;
+}
+.cigar-information {
+	padding: 0 114px;
+}
+.cigar-information p {
+	line-height: 1.7em;
+	margin-bottom: 1.6em;
+}
+.cigars-slider-holder--inner .cigar {
+	background-position: center center;
+}
+.cigar-header-image--robusto {
+	background: url(../gfx/cigars-png/robusto.png) center center no-repeat;
+	background-size: contain;
+}
+.cigar-header-image--granmareva {
+	background: url(../gfx/cigars-png/granmareva.png) center center no-repeat;
+	background-size: contain;
+}
+.cigar-header-image--salomone {
+	background: url(../gfx/cigars-png/salomone.png) center center no-repeat;
+	background-size: contain;
+}
+.cigar-header-image--pyramide {
+	background: url(../gfx/cigars-png/pyramide.png) center center no-repeat;
+	background-size: contain;
+}
+.cigar-header-image--cottontail {
+	background: url(../gfx/cigars-png/cottontail.png) center center no-repeat;
+	background-size: contain;
+}
+.cigar-header-image--belicoso {
+	background: url(../gfx/cigars-png/belicoso.png) center center no-repeat;
+	background-size: contain;
+}
+.cigar-header-image--mareva {
+	background: url(../gfx/cigars-png/granmareva.png) center center no-repeat;
+	background-size: contain;
+}
+.cigar-header-image--grandcafe {
+	background: url(../gfx/cigars-png/grandcafe.png) center center no-repeat;
+	background-size: contain;
+}
+.cigar-header-image--dahman {
+	background: url(../gfx/cigars-png/dahman.png) center center no-repeat;
+	background-size: contain;
+}
+
+/*---
+	How to buy
+---*/
+.distributors-list .column-1-3,
+.team-list .column-1-2 {
+	padding: 0 5px;
+}
+.map-holder {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#map-canvas {
+	height: 100%;
+	width: 100%;
+}
+.distributor-heading {
+	padding-top: 40px;
+}
+.person-name,
+.distributor-name {
+	font-family: 'Lora', serif;
+	font-style: italic;
+	color: #c59949;
+	text-align: center;
+	padding: 30px 0 20px;
+}
+.person-image,
+.distributor-image {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+}
+.person-image {
+	width: 300px;
+	margin: 0 auto;
+	height: 400px;
+}
+.distributor-image:before {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	background: #c59949;
+	opacity: 0.2;
+}
+.person-title,
+.person-email,
+.distributor-address {
+	display: block;
+	font-size: 16px;
+	line-height: 1.5em;
+	text-align: center;
+	margin-bottom: 50px;
+	color: #fdedca;
+}
+p.person-title {
+	margin-bottom: 0;
+}
+.team-country,
+.distributors-country {
+	margin-bottom: 80px;
+}
+
+
+@media only screen and (max-width : 1600px) {
+
+}
+@media only screen and (max-width : 1200px) {
+
+}
+@media only screen and (max-width : 1024px) {
+
+}
+@media only screen and (max-width : 768px) {
+
+}
+/* Custom styles
+-------------------------------------------------------- */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.reset {
+	padding: 0;
+	margin: 0;
+}
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+ul.reset li {
+	list-style: none;
+}
